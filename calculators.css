@@ -2,14 +2,17 @@ body {
   font-family: "Baloo 2", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
   background-color: #f8f9fa;
-  gap: 20px;
-  flex-wrap: wrap;
+}
+
+.calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .calculator-container {
@@ -23,25 +26,15 @@ body {
     0 10px 25px rgba(148, 130, 133, 0.4),
     0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 25px;
-  width: flex;
-  max-width: 460px;
-  min-height: 100px; /* ← Set a minimum height */
-}
-
-.calculator-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 30px; /* Make sure this is here for spacing between boxes */
-  padding: 20px;
+  width: 100%;
+  max-width: 600px;
   box-sizing: border-box;
 }
 
 h2 {
   text-align: center;
-  color: #2b0306; /* Burgundy heading */
+  color: #2b0306;
+  margin-top: 0;
 }
 
 .calc-input-group {
@@ -62,8 +55,16 @@ h2 {
 .calc-input-group input {
   padding: 10px;
   width: 150px;
-  border: 1px solid #f1a3ad; /* Pink accent border */
+  border: 1px solid #f1a3ad;
   border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 15px;
 }
 
 button {
@@ -73,13 +74,22 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 15px;
   transition: background-color 0.3s ease;
+  flex: 1;
+  margin: 0 5px;
 }
 
 button:hover {
   background-color: #f1a3ad;
   color: black;
+}
+
+button#clearBtn {
+  background-color: #f44336;
+}
+
+button#clearBtn:hover {
+  background-color: #e53935;
 }
 
 .calc-result {
@@ -93,4 +103,15 @@ button:hover {
   font-style: italic;
   color: #555;
   white-space: pre-line;
+}
+
+@media (max-width: 500px) {
+  .calculator-container {
+    max-width: 95%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
