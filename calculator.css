@@ -1,0 +1,96 @@
+body {
+  font-family: "Baloo 2", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #f8f9fa;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-left: 20px solid #948285;
+  border-radius: 20px;
+  box-shadow:
+    0 10px 25px rgba(148, 130, 133, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: flex;
+  max-width: 460px;
+  min-height: 100px; /* ← Set a minimum height */
+}
+
+.calculator-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px; /* Make sure this is here for spacing between boxes */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  color: #2b0306; /* Burgundy heading */
+}
+
+.calc-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.calc-input-group label {
+  margin-right: 10px;
+  color: #2b0306;
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.calc-input-group input {
+  padding: 10px;
+  width: 150px;
+  border: 1px solid #f1a3ad; /* Pink accent border */
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #2b0306;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f1a3ad;
+  color: black;
+}
+
+.calc-result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2b0306;
+}
+
+.calc-work {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+  white-space: pre-line;
+}
